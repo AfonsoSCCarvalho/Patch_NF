@@ -1,0 +1,6 @@
+Stride | Patch Size | PSNR | Time (seconds)
+---------------------------------------------
+     2 |          4 | 34.6617546081543 |          41.50
+     3 |          4 | 34.655094146728516 |          40.09
+
+## Best configuration: Stride 2, Patch Size 4, PSNR: 34.6617546081543, Time: 41.50345468521118 seconds ##
