@@ -1,7 +1,10 @@
 # Patch-Based Neural Network Regularization for Hyperspectral Image Fusion
 
-![Simplified Schema of Fusion](Imgs/fusion_images.png)
-*Figure 1: Simplified schema of the fusion process. [Adapted from source: Edmund Optics on Hyperspectral and Multispectral Imaging](https://www.edmundoptics.com/knowledge-center/application-notes/imaging/hyperspectral-and-multispectral-imaging/)*
+<p align="center">
+  <img src="Imgs/Fusion_images.png" alt="Simplified Schema of Fusion">
+  <br>
+  <em>Figure 1: Simplified schema of the fusion process. <a href="https://www.edmundoptics.com/knowledge-center/application-notes/imaging/hyperspectral-and-multispectral-imaging/">Adapted from source: Edmund Optics on Hyperspectral and Multispectral Imaging</a></em>
+</p>
 
 
 ## Overview
@@ -21,15 +24,18 @@ The code is tailored for the following hyperspectral datasets:
 
 ### Installation
 1. Clone the repository:
-git clone https://github.com/AfonsoSCCarvalho/Patch_NN.git
+git clone https://github.com/AfonsoSCCarvalho/Patch_NF.git
 2. Navigate to the cloned repository:
 cd Patch_NN
 3. Install the necessary Python packages:
 pip install -r requirements.txt
 
 
-![Schema Used in the Patch NF Procedure](Imgs/Schema_procedure.png)
-*Figure 2: Schema used in the Patch NF procedure.*
+<p align="center">
+<img src="Imgs/Schema_procedure.png" alt="Schema Used in the Patch NF Procedure">
+<br>
+<em>Figure 2: Schema used in the Patch NF procedure.</em>
+</p>
 
 ### Running Patch-NF
 A simplified schema of the procedure used in this thesis is presented in Figure 2. Starting with the original super-resolution HS image, we performed a pre-processing step that generated the simulated hyperspectral and multispectral images. This step allowed us to obtain a good initialization of Z for our Patch NF regularization through an initial optimization. Although the DEEP SURE solution provides even better results, the FUSE solution was chosen as the most optimal for this process.
