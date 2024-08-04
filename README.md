@@ -1,7 +1,11 @@
 # Patch-Based Neural Network Regularization for Hyperspectral Image Fusion
 
+![Simplified Schema of Fusion](Imgs/fusion_images.png)
+*Figure 1: Simplified schema of the fusion process. [Adapted from source: Edmund Optics on Hyperspectral and Multispectral Imaging](https://www.edmundoptics.com/knowledge-center/application-notes/imaging/hyperspectral-and-multispectral-imaging/)*
+
+
 ## Overview
-This repository contains code for the implementation of a neural network-based approach for fusing hyperspectral images, utilizing patch-based regularization techniques. The project aims to enhance feature extraction and improve classification performance by effectively combining information from multiple hyperspectral datasets.
+This repository contains code for the implementation of a neural network-based approach for fusing hyperspectral images, utilizing patch-based regularization techniques, called Patch-NF. The project aims to enhance feature extraction and improve classification performance by effectively combining information from multiple hyperspectral datasets.
 
 ## Datasets
 The code is tailored for the following hyperspectral datasets:
@@ -23,11 +27,19 @@ cd Patch_NN
 3. Install the necessary Python packages:
 pip install -r requirements.txt
 
-### Running the Scripts
+
+![Schema Used in the Patch NF Procedure](Imgs/Schema_procedure.png)
+*Figure 2: Schema used in the Patch NF procedure.*
+
+### Running Patch-NF
+A simplified schema of the procedure used in this thesis is presented in Figure 2. Starting with the original super-resolution HS image, we performed a pre-processing step that generated the simulated hyperspectral and multispectral images. This step allowed us to obtain a good initialization of Z for our Patch NF regularization through an initial optimization. Although the DEEP SURE solution provides even better results, the FUSE solution was chosen as the most optimal for this process.
+
+The multispectral image was also used to train our Patch Normalizing Flow neural network. After training, the Patch NF algorithm was employed, which, after a certain number of steps, produced the final image. This resulting image was then compared with other baseline results to evaluate its performance.
+
 To run the scripts for image fusion:
-1. Ensure that the data for both Indian Pines and Pavia University is downloaded and located in the appropriate directory.
-2. Execute the main script:
+1. Execute on of the main scripts:
 python PatchNN_clean_fuse.py
+python PatchNN_clean_deep_sure.py
 
 ## Contact
 If you have any questions or would like to contribute to the project, please feel free to contact me.
