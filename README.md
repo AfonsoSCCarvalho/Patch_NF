@@ -34,8 +34,7 @@ The code is tailored for the following hyperspectral datasets:
 ### Installation
 1. Clone the repository:
 git clone https://github.com/AfonsoSCCarvalho/Patch_NF.git
-2. Navigate to the cloned repository:
-cd Patch_NN
+2. Navigate to the cloned repository
 3. Install the necessary Python packages:
 pip install -r requirements.txt
 
