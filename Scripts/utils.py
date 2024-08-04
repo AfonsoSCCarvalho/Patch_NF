@@ -11,6 +11,7 @@
 # Wasserstein Generative Models for Patch-based Texture Synthesis. 
 # ArXiv Preprint#2007.03408
 # (https://github.com/ahoudard/wgenpatex)
+
 import scipy.io as sio
 import torch
 from torch import nn
